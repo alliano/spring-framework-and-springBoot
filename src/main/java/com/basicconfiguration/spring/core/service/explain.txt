@@ -1,0 +1,18 @@
+sebelumya kita telah membahas cara membut bean menggunakan method configuration dengan 
+annotation @Bean 
+Spring jga menyediakan cara otomatis tampa harus kita membuat method @Bean 
+kita bisa mendai sebagai class dengan annotation @Component, secara otomatis 
+spring akan membuatkan bean untuk class tersebut
+@Component hanay mandukung pepmbuatan hanya 1 bean saja, jadi jika kita ingin membuat
+bebrapa bean dalam 1 Class kita harus menggunkan @bean method
+
+Component Bean
+saat kita menggunakan @Component, nama bean akan secara otomatis dibuat otomatis oleh
+Spring
+jika kita menggunkana @ComponentScan secara otomatis bean nama akan mengunakan nama class
+namaun menjadi camelCase misal Categoryservice menjadi categoryService
+jika kita menggunakan @Import secara otomatis bean name akan menjadi NameClass.cass.getName()
+namun jika kita ingin membaut nama yang berbeda kita bisa menggunakan @Component(value = "nama bean")
+
+semua annotation seperti @Scope, @PostConstruct, @PreDestroy ,@Primary dll kita bisa 
+gunakan di @Component

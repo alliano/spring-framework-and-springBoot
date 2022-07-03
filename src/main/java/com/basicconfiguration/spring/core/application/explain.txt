@@ -1,0 +1,24 @@
+SpringBoot application
+
+sebelumnyta kita selalu membuat Application Contex secara menual, dan kita belum menggunakan
+fitur Otomatis SpringBoot
+pada saat membuat applikasi pringBoot kita akan mengganti @ConfigurationUtama menjadi @SpringBootApplication
+isi dari annotaion @SpringBootApplication adalah gabungan dari @Configuration dan banyak hal lain
+seperti contohnya @ComponentScan() 
+exp : FooApplication.java
+
+SpringAplication
+selain @SpringBootApplication untuk membuat application Contex nya kita tidak perlu membuat secara manual
+kita bisa menggunakan class SpringAplication
+secara Otomatis SpringAplication akan membuat ApplicationContex dan melakukan hal2 
+yang di butuhkan secara otomatis 
+exp : FooApplication.java => main class
+
+
+StartUp failure
+SpringBoot memiliki fitur FailureAnalyzer 
+FailureAnalyzer digunakan untuk melakukan analisa ketika terjadi error ketika stasrt application SpringAplication
+yang menyebabkan spring tidak mau berjalan
+spring sudah menyediakan abnyak sekali class implementasi FailureAnalyzer yang bisa mempermudah kita
+menganalisa kesalahan ketika terjadi startup failure 
+Exp : FooApplication.java => bean ke 2 

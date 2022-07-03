@@ -1,0 +1,4 @@
+hati2 dengan Cilcular dependency
+circular dependency adalah kasus diman sebuah lingkaran dependency terjadi .
+misal BeanA membutuhkan BeanB BeanB membutuhkan BeanC dan BeanC membutuhkan BeanA
+jika terjadi cilcular dependency seperti ini maka secara otomatis akan Error

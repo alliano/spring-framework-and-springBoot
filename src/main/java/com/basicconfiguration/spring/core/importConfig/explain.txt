@@ -1,0 +1,6 @@
+saat nanti applikasi dibuat pasti akan membaut banyak configuration class dan bean
+biasanya kita akan membuat banyak sekali, tergantung seberapa komplex aplikasi kita nanti
+Spring mendukung import configuration Class lain jika dibutuhkan 
+kita bisa menggunakan annotation @import({}) lalu sebutkan Configuration Class mana yang 
+ingin kita import
+ketika kita mau import kita bisa mengimport banyak class 
