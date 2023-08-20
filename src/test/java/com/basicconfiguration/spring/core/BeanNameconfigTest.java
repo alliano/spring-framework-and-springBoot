@@ -18,8 +18,8 @@ public class BeanNameconfigTest {
    }
    @Test
    void testName(){
-      Foo foo1 = this.context.getBean("foo1",Foo.class );
-      Foo foo2 = this.context.getBean("foo2",Foo.class );
+      Foo foo1 = this.context.getBean("foo_first",Foo.class );
+      Foo foo2 = this.context.getBean("foo_second",Foo.class );
       Foo fooFirst = this.context.getBean(Foo.class );
 
       Assertions.assertSame(foo1, fooFirst);

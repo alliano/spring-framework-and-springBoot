@@ -1,14 +1,14 @@
 package com.basicconfiguration.spring.core.processor;
 
 import java.util.UUID;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.Ordered;
+import org.springframework.stereotype.Component;
 
 import com.basicconfiguration.spring.core.aware.IdAware;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**BeanPostProcressor
  * 
@@ -26,31 +26,23 @@ import com.basicconfiguration.spring.core.aware.IdAware;
  * nya menjadi UUID (Unique Id)
  * 
  * class yang berkaitan Idgenerator -> IdgeneratorPostProcessor -> BeanpostProcessorTest
- * 
- * 
  */
-
-public class IdGeneratorPostProcessor implements BeanPostProcessor ,Ordered{
+@Component @Slf4j
+public class IdGeneratorPostProcessor implements BeanPostProcessor, Ordered {
    
    @Override
    public int getOrder() {
       return 1;
    }
 
-
-   private Logger logger = LoggerFactory.getLogger(IdGeneratorPostProcessor.class);
    @Override
    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-      
-      logger.info("Id generator processor for Bean {} ", beanName);
+      log.info("Id generator processor for Bean {} ", beanName);
       if (bean instanceof IdAware){
-         logger.info("set Id generator for Bean {} ", beanName);
+         log.info("set Id generator for Bean {} ", beanName);
          IdAware idAware = (IdAware) bean;
          idAware.setId(UUID.randomUUID().toString());
       }
       return bean;
    }
- 
-   
-   
 }

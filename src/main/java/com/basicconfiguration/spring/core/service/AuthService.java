@@ -4,10 +4,12 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuthService implements ApplicationContextAware, BeanNameAware {
+public class AuthService implements ApplicationContextAware, BeanNameAware, EnvironmentAware {
    /*Aware
     *
     * Spring memiliki interface yang bernama Aware 
@@ -31,7 +33,10 @@ public class AuthService implements ApplicationContextAware, BeanNameAware {
      * 
      */
    private String beanName;
+
    private ApplicationContext applicationContext;
+
+   private Environment environment;
    
    @Override
    public void setBeanName(String name) {
@@ -48,5 +53,14 @@ public class AuthService implements ApplicationContextAware, BeanNameAware {
    }
    public ApplicationContext getApplicationContext() {
       return applicationContext;
+   }
+
+   @Override
+   public void setEnvironment(Environment environment) {
+      this.environment = environment;
+   }
+
+   public Environment getEnvironment() {
+      return this.environment;
    }
 }

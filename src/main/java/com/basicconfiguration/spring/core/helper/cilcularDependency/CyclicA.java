@@ -1,20 +1,14 @@
 package com.basicconfiguration.spring.core.helper.cilcularDependency;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor @AllArgsConstructor
+@Setter @Getter
 public class CyclicA{
 
    private CyclicB cyclicB;
-
-   public CyclicA(CyclicB cyclicB) {
-      this.cyclicB = cyclicB;
-   }
-   public CyclicA(){}
-
-   public CyclicB getCyclicB() {
-      return cyclicB;
-   }
-
-   public void setCyclicB(CyclicB cyclicB) {
-      this.cyclicB = cyclicB;
-   }
 
 }

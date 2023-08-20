@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import com.basicconfiguration.spring.core.helper.MultipleFoo;
 import com.basicconfiguration.spring.core.repository.CategoryRepository;
 import com.basicconfiguration.spring.core.repository.CustomerRepository;
@@ -30,13 +29,13 @@ public class ComponentconfigurationTest {
 
       Assertions.assertNotNull(productService1);
       Assertions.assertNotNull(productService2);
+      Assertions.assertSame(productService1, productService2);
    }
 
    @Test
    void productRepoTest(){
       ProductService productService = this.context.getBean(ProductService.class);
       ProductRepository productRepository = this.context.getBean(ProductRepository.class);
-
       Assertions.assertSame(productRepository,productService.getProductRepository());
    }
 
@@ -51,7 +50,6 @@ public class ComponentconfigurationTest {
    @Test
    void dependencyInjectionTest(){
       CustomerService service = this.context.getBean(CustomerService.class);
-      
       CustomerRepository normalCustomerRepo = this.context.getBean("normalCustomerRepository", CustomerRepository.class);
       CustomerRepository premiumCustomerRepo = this.context.getBean("premiumCustomerRepository", CustomerRepository.class);
 

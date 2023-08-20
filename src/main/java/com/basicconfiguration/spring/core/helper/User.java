@@ -1,16 +1,14 @@
 package com.basicconfiguration.spring.core.helper;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter @Getter
+@AllArgsConstructor @NoArgsConstructor
 public class User {
    
    private String userName;
-
-   public User(String userName) {
-      this.userName = userName;
-   }
-   public void setUserName(String userName) {
-      this.userName = userName;
-   }
-   public String getUserName() {
-      return userName;
-   }
+   
 }

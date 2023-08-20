@@ -24,6 +24,4 @@ public class SingletonTest{
        */
       Assertions.assertSame(databse1, databse2);
    }
-
-
 }

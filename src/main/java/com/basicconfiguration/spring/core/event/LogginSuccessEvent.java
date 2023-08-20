@@ -4,6 +4,9 @@ import org.springframework.context.ApplicationEvent;
 
 import com.basicconfiguration.spring.core.helper.User;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Event Listener
  * 
@@ -20,7 +23,7 @@ import com.basicconfiguration.spring.core.helper.User;
  * 
  */
 
-
+@Setter @Getter
 public class LogginSuccessEvent extends ApplicationEvent {
    
    private User user;
@@ -28,12 +31,5 @@ public class LogginSuccessEvent extends ApplicationEvent {
    public LogginSuccessEvent(User user) {
       super(user);
       this.user = user;
-   }
-
-   public void setUser(User user) {
-      this.user = user;
-   }
-   public User getUser() {
-      return user;
    }
 }

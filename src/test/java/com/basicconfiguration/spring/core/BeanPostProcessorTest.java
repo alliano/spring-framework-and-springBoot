@@ -19,10 +19,11 @@ public class BeanPostProcessorTest {
     * car.getId() tidak dapat menemukan String id yang dihasilkan dari class IdGeneratorPostProcessor
     */
    @Configuration
-   @Import(value = {Car.class,IdGeneratorPostProcessor.class})
-   public static class TestConfiguration {
-
-   }
+   @Import(value = {
+      Car.class,
+      IdGeneratorPostProcessor.class
+   })
+   public static class TestConfiguration { }
 
    private ConfigurableApplicationContext context;
 

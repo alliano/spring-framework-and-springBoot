@@ -2,7 +2,6 @@ package com.basicconfiguration.spring.core;
 
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Component;
-
 import com.basicconfiguration.spring.core.service.MerchentServiceImpl;
 
 /**
@@ -17,7 +16,7 @@ import com.basicconfiguration.spring.core.service.MerchentServiceImpl;
  */
 
 @Component
-@Import(value = {MerchentServiceImpl.class})
-public class InheritanceConfiguration {
-   
-}
+@Import(value = {
+    MerchentServiceImpl.class
+})
+public class InheritanceConfiguration { }

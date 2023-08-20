@@ -1,12 +1,11 @@
 package com.basicconfiguration.spring.core.processor;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.Ordered;
-
+import org.springframework.stereotype.Component;
 import com.basicconfiguration.spring.core.aware.IdAware;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * ORDERED
@@ -19,10 +18,8 @@ import com.basicconfiguration.spring.core.aware.IdAware;
  */
 
 
-
-public class PrefixIdGeberatorPostProcessor implements BeanPostProcessor,Ordered{
-
-   Logger logger = LoggerFactory.getLogger(PrefixIdGeberatorPostProcessor.class);
+@Component @Slf4j
+public class PrefixIdGeberatorPostProcessor implements BeanPostProcessor, Ordered {
 
    @Override
    public int getOrder() {
@@ -31,9 +28,9 @@ public class PrefixIdGeberatorPostProcessor implements BeanPostProcessor,Ordered
    
    @Override
    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-      logger.info("Prefix Id Generator Processor for Bean {} ", beanName);
+      log.info("Prefix Id Generator Processor for Bean {} ", beanName);
       if (bean instanceof IdAware){
-         logger.info("Prefix set Id Generator Processor for Bean {} ", beanName);
+         log.info("Prefix set Id Generator Processor for Bean {} ", beanName);
          IdAware idAware =  (IdAware) bean;
          idAware.setId("Second-" + idAware.getId());
       }

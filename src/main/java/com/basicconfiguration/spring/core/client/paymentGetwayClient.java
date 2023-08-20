@@ -4,10 +4,14 @@ package com.basicconfiguration.spring.core.client;
  * ini sebagai contoh class third party liberary untuk contoh BeanFactory
  */
 
-public class paymentGetwayClient{
+public class paymentGetwayClient {
+
    private String endpoint;
+
    private String privateKey;
+
    private String publicKey;
+
    public String getEndpoint() {
       return endpoint;
    }

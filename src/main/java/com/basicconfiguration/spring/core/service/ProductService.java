@@ -1,14 +1,11 @@
 package com.basicconfiguration.spring.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-
 import com.basicconfiguration.spring.core.repository.ProductRepository;
 
-
-
-
-
+@Lazy
 @Component(value = "productService")
 public class ProductService {
   
@@ -27,12 +24,11 @@ public class ProductService {
    }
 
 
-   public ProductService(ProductRepository productRepository,String name){
+   public ProductService(ProductRepository productRepository, String name){
       this.productRepository = productRepository;
    }
 
    public ProductRepository getProductRepository() {
       return this.productRepository;
    }
-   
 }

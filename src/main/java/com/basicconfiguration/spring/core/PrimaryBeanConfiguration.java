@@ -3,12 +3,10 @@ package com.basicconfiguration.spring.core;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-
 import com.basicconfiguration.spring.core.helper.Foo;
 
 @Configuration
 public class PrimaryBeanConfiguration{
-
 
    /**
     * untuk mengatasi duplicate Bean sebenarnya kita bisa mengatasinya
@@ -19,8 +17,8 @@ public class PrimaryBeanConfiguration{
     * Contoh :
     * @return
     */
-    @Primary
-   @Bean
+
+   @Bean @Primary
    public Foo foo1(){
       return new Foo();
    }

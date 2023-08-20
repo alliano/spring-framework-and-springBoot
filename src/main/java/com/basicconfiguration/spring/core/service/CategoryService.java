@@ -2,7 +2,6 @@ package com.basicconfiguration.spring.core.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import com.basicconfiguration.spring.core.repository.CategoryRepository;
 
 /**
@@ -22,10 +21,16 @@ public class CategoryService {
    
    private CategoryRepository repository;
 
+   // Constructor Injection
+   public CategoryService(CategoryRepository categoryRepository) {
+      this.repository = categoryRepository;
+   }
+
    public CategoryRepository getRepository() {
       return repository;
    }
 
+   // Setter Injection
    @Autowired
    public void setRepository(CategoryRepository repository) {
       this.repository = repository;

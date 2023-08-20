@@ -1,7 +1,5 @@
 package com.basicconfiguration.spring.core.helper.lifeCycleBean;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
@@ -13,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
  * saat pertamakali spring berjalan dan sudah selesai membaut bean, spring akan memberi tau
  * bean tersebut bahwa bean tersenbut sdah siap, artinya semua dependencies sudah dimasukan 
  * kedalam spring container.
- * dan ketika applikasi spring akan mati, spring juga akan memneri atau semua bean bahwa 
+ * dan ketika applikasi spring akan mati, spring juga akan memberi tau semua bean bahwa 
  * bean tersebuat akan di hancurkan
  */
 
@@ -26,16 +24,15 @@ import lombok.extern.slf4j.Slf4j;
   * InitializingBean digunakan jika kita ingin berinteraksi ketika spring selesai membaut bean
   * DisposableBean digunakan ketika kita ingin berinteraksi ingin menghancurkan bean.
   */
-  @Slf4j
+@Slf4j
 public class Connection implements InitializingBean, DisposableBean {
-   private Logger logger = LoggerFactory.getLogger(Connection.class);
 
    /**
     * method ini akan secara otomatis di panggil ketika spring telah selesai membuat Bean
     */
    @Override
    public void destroy() throws Exception {
-      logger.info("connection has closed");
+      log.info("connection has closed");
       
    }
 
@@ -44,7 +41,7 @@ public class Connection implements InitializingBean, DisposableBean {
     */
    @Override
    public void afterPropertiesSet() throws Exception {
-      logger.info("connection has ready to be use");
+      log.info("connection has ready to be use");
       
    }
    

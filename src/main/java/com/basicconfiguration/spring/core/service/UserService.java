@@ -3,12 +3,12 @@ package com.basicconfiguration.spring.core.service;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
 import org.springframework.stereotype.Component;
-
+import com.basicconfiguration.spring.core.event.LogginFailedEvent;
 import com.basicconfiguration.spring.core.event.LogginSuccessEvent;
 import com.basicconfiguration.spring.core.helper.User;
 
 @Component
-public class UserService implements ApplicationEventPublisherAware{
+public class UserService implements ApplicationEventPublisherAware {
    
    private ApplicationEventPublisher applicationEventPublisher;
 
@@ -21,13 +21,12 @@ public class UserService implements ApplicationEventPublisherAware{
          this.applicationEventPublisher.publishEvent(new LogginSuccessEvent(new User(userName)));// => mengirim Event nya
          return true;
       }else{
+         this.applicationEventPublisher.publishEvent(new LogginFailedEvent(new User(userName)));
          return false;
       }
    }
-
-   public boolean isLoginSucces( String userName, String password){
+   
+   public boolean isLoginSucces(String userName, String password){
       return "alliano".equals(userName) && "hagoromo".equals(password);
    }
-   
-
 }

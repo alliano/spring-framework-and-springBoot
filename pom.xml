@@ -14,7 +14,7 @@
 	<name>springconfogure</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>19</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -33,7 +33,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	
 
 	<build>

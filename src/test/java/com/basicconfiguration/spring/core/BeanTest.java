@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import com.basicconfiguration.spring.core.helper.Foo;
 
 public class BeanTest {
@@ -15,11 +14,6 @@ public class BeanTest {
    @BeforeEach
    void setUp(){
       this.context = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-   }
-   
-   @Test
-   void TestBean(){
-      Assertions.assertNotNull(context);  
    }
 
    @Test
@@ -36,6 +30,5 @@ public class BeanTest {
        * untuk membuktikan bahawa ini sama kita bisa cek 
        */
       Assertions.assertSame(foo1, foo2);
-
    }
 }

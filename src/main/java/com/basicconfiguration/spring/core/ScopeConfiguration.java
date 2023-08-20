@@ -1,20 +1,15 @@
 package com.basicconfiguration.spring.core;
 
-import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-
 import com.basicconfiguration.spring.core.helper.Foo;
-
-import ch.qos.logback.classic.Logger;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Configuration
 public class ScopeConfiguration {
-   
-   private Logger logger = (Logger) LoggerFactory.getLogger(ScopeConfiguration.class);
 
    /**
     * scope merupakan strategy cara sebuah object di buat secara default object di spring dibuat 
@@ -25,24 +20,10 @@ public class ScopeConfiguration {
     * jika kita tidak tambahkan annotasi @Scope() by default spring akan menggunakan secope singleton
     */
 
-    /**
-     * **********************************************************************+
-     * Scope         |keterangan                                             |
-     * **********************************************************************+
-     * single ton    |(Default) hanya di buat 1x dalam spring ioc            *
-     * prototype     |selalu di buatkan object baru setiap kali bean di akses*
-     * request       |dibuat baru per HTTP Request (hanya untuk web App)     *
-     * session       |dibuatkan baru per HTTP session (hanya untuk web App)  *
-     * application   |dibuatkan baru per ServletContex(hanya untuk web App)  *
-     * webSocket     |dibuat baru per WebSocket (hanya untuk webSocket App)  *
-     * **********************************************************************+
-     * 
-     */
-
-   @Scope(value = "prototype")
+   @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
    @Bean(value = "fooScope")
    public Foo foo(){
-      logger.info("===>Foo Scope has created<===");
+      log.info("===>Foo Scope has created<===");
       return new Foo();
    }
 }

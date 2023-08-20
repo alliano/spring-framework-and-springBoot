@@ -2,7 +2,6 @@ package com.basicconfiguration.spring.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import com.basicconfiguration.spring.core.helper.cilcularDependency.CyclicA;
 import com.basicconfiguration.spring.core.helper.cilcularDependency.CyclicB;
 import com.basicconfiguration.spring.core.helper.cilcularDependency.CyclicC;
@@ -24,5 +23,4 @@ public class CyclicConfiguration {
    public CyclicC cyclicC(CyclicA cyclicA){
       return new CyclicC(cyclicA);
    }
-   
 }

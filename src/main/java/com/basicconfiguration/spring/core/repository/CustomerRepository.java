@@ -1,6 +1,6 @@
 package com.basicconfiguration.spring.core.repository;
 
+import org.springframework.stereotype.Component;
 
-public class CustomerRepository {
-   
-}
+@Component
+public class CustomerRepository { }

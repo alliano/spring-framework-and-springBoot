@@ -2,7 +2,6 @@ package com.basicconfiguration.spring.core;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import com.basicconfiguration.spring.core.helper.MainServer;
 import com.basicconfiguration.spring.core.helper.Server;
 import com.basicconfiguration.spring.core.helper.lifeCycleBean.Connection;
