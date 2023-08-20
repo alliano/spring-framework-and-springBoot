@@ -23,7 +23,7 @@ Inversion Of control (IOC) adalah prinsip dalam pembuatan prengkat lunak, yangma
 Saat pembuatan applikasi sering kali kita membuat object dan sebagainya secara manual, dengan prinsip IOC ini kita akan menyerahkan banyak pekerjaan kepada container IOC  
 contauiner IOC ini memiliki kontrol kepada program kita, menejemen object pada program kita dan juga melakukan abstraction kepada program kita.  
 
-# Diagram Inversion Of Control
+<!-- # Diagram Inversion Of Control -->
 
 # Application context 
 ApllicationContext adalah sebuah interface atau kontrak representasi dari container IOC di spring framework  
