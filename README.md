@@ -1959,7 +1959,7 @@ public class OptionalDependencyTest {
 # Factory Bean
 Terkadang kita ingin membauat bean dari class atau object yang tidak bisa kita ubah lagi atau tidak bisa kita kontrol, misalnya Third party Liberary dan sebagainya.  
 pada kausu seperti ini kita membuat bean  nya menggunakan @Bean method.  
-Atau menggunakan annotasi @Componen atau @Configuration dnegan mengimplemmentasikan interface [FactoryBean\<T>](https://docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/beans/factory/FactoryBean.html), FactoryBean\<T> ini cocok banget jikalau kita ingin membuat bean dari third party liberary.  
+Atau menggunakan annotasi @Componen atau @Configuration dnegan mengimplemmentasikan interface [FactoryBean\<T>](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/FactoryBean.html), FactoryBean\<T> ini cocok banget jikalau kita ingin membuat bean dari third party liberary.  
 
 ``` java
 package com.basicconfiguration.spring.core.client;
