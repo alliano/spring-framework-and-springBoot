@@ -2132,10 +2132,10 @@ public class InheritanceTest {
 }
 ```
 
-# FactoryBean
+# BeanFactory
 ApplicationContext merupakan turunan dari BeanFactory.  
 BeanFactory ini merupakan kontrak untuk menejemen Bean di spring framework.  
-Method-method yang sering kita gunakan misalnya method getBean() dan sebagainya, itu merupakan method kontrak milik interface [FactoryBean](https://docs.spring.io/spring-framework/docs/current/javadocs-api/springframework/beans/factory/BeanFactory.html)
+Method-method yang sering kita gunakan misalnya method getBean() dan sebagainya, itu merupakan method kontrak milik interface [BeanFactory](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/BeanFactory.html)
 
 # ListableBeanFactory
 FactoryBean hanya bisa digunakan untuk megambil atau mengakses single Bean, mislanya kita ingin mengambil beberapa bean maka kita harus menyebutkan nama bean tersebut satu persatu.  
