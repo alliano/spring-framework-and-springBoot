@@ -2223,7 +2223,7 @@ public class BeanFactoryTest {
 
 # BeanPostProcessor
 Merupakan interface yang digunakan untuk memodifikasi proses pembuatan Bean di ApplicationContext  
-[BeanPostProcessor](https://docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/beans/factory/config/BeanPostProcessor.html) ini mirip seperti Interceptor atau Middleware, BeanPostProcessor ini memiliki 2 method yaitu : 
+[BeanPostProcessor](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/config/BeanPostProcessor.html) ini mirip seperti Interceptor atau Middleware, BeanPostProcessor ini memiliki 2 method yaitu : 
    * postProcessAfterInitialization(object, name) di eksekusi saat proses pembuatan bean selesai
    * postProcessBeforeInitialization(object, name) di eksekusi saat proses pembuatan bean belum selesai dubuat
   
