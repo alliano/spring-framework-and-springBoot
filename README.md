@@ -2454,7 +2454,7 @@ public class TestBeanPostProcessorOrdered {
 ```
 
 # Aware
-Aware merupakan interface milik Spring yang digunakan unutuk semua [Aware](https:docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/beans/factory/Aware.html) interface.  
+Aware merupakan interface milik Spring yang digunakan unutuk semua [Aware](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/Aware.html) interface.  
 Aware ini diperuntukan sebagai Penanda agar spring melakukan Injection object yang kita butuhkan  
 Aware ini mirip seperti yang sudah kita lakukan ketika membuat IdAware menggunakan IdGenerator BeanPostProcessor, Namun kita tidak perlu lagi membuat BeanPostProcessor secara manual.  
 
