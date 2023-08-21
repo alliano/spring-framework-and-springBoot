@@ -2139,7 +2139,7 @@ Method-method yang sering kita gunakan misalnya method getBean() dan sebagainya,
 
 # ListableBeanFactory
 FactoryBean hanya bisa digunakan untuk megambil atau mengakses single Bean, mislanya kita ingin mengambil beberapa bean maka kita harus menyebutkan nama bean tersebut satu persatu.  
-Terkadang dalam case tertentu kita ingin mengambil semua bean sekaligus, untuk kasus seperti itu kita dapat memanfaatkan [ListableBeanFactory](https://docs.spring.io/spring-framework/docs/current/javadocs-api/springframework/beans/factory/ListableBeanFactory.html)  
+Terkadang dalam case tertentu kita ingin mengambil semua bean sekaligus, untuk kasus seperti itu kita dapat memanfaatkan [ListableBeanFactory](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/ListableBeanFactory.html)  
 ListableBeanFactory merupakan turunan dari interface FactoryBean, dan ApplicationContext merupakan turunan dari ListableBeanFactory.  
 
 ``` java 
