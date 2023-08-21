@@ -2567,7 +2567,7 @@ public class AwareTest {
 ```
 # Application Event Publisher
 ApplicationEventPublisher merupakan suatu object untuk mengirimkan suatu event kepada Listener, ApplicationEventPublisher juga merupakan super interface dari ApplicationContext.  
-Untuk mendapatkan object ApplicationEventPublisher kita dapat mengimplementasikan interface [ApplicationEventPublisherAware](https:docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/context/ApplicationEventPublisher.html)  
+Untuk mendapatkan object ApplicationEventPublisher kita dapat mengimplementasikan interface [ApplicationEventPublisherAware](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEventPublisherAware.html)  
 
 # Application Event Listener
 Spring memiliki fitur Event Listener untuk mendengarkan suatu kejadian atau event yang dikirimkan oleh Event Publisher  
