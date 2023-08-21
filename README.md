@@ -2791,7 +2791,7 @@ public class EventListenerTest {
 # @SpringBootApplication
 Sebelumnya kita telah mempelajari cara membuat ApplicationContext secara manual, dan belum menggunakan fitur otomatis dari SpringBoot.  
 Saat kita ingin Belajar SpringBoot, lebih baiknya jikalau kita mempelajari SpringFramework atau Spring Core terlebih dahulu agar mengetahui low level bangaimana cara kerja SpringBoot, karena SpringBoot berjalan diatas layer SpringFramework.  
-Pada saat kita menggunakan SpringBoot, kita akan mengganti @Configuration, @ComponentScan dan sebagainya pada configuraton utama dengan annotation [@SpringBootApplication](https://docs.spring.io/spring-boot/docs/current/api/org/spirngframework/boot/autoconfigure/SpringBootApplication.html) maka secara otomatis applikasi SpringBoot kita akan di konfigurasi secara otomatis  
+Pada saat kita menggunakan SpringBoot, kita akan mengganti @Configuration, @ComponentScan dan sebagainya pada configuraton utama dengan annotation [@SpringBootApplication](https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html) maka secara otomatis applikasi SpringBoot kita akan di konfigurasi secara otomatis  
 
 ``` java
 package com.basicconfiguration.spring.core.application;
