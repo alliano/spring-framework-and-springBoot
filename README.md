@@ -1135,8 +1135,8 @@ Dan disaat Applikasi Spring akan dimatikan maka Container ioc akan memberitau se
 
 # Lifecycle callback
 Bean pada spring framewrok tidak mengetahui Lifecycle dari Spring ketika selesai membuat bean dan ketika akan menghamcurkan atau mematikan semua bean.  
-Jika kita ingin berintraksi dengan Lifecycle Spring framework, kita bisa mengimplementasikan [InitializingBean](https://docs.spring.io/docs/current/javadocs-api/org/springframework/beans/factory/InitializingBean.html)(untuk berintraksi ketika Spring selesai membuat semua bean).  
-[DisposableBean](https://docs.spring.io/docs/current/javadocs-api/org/springframework/beans/factory/DisposableBean.html)(untuk berintraksi ketika Applikasi Spring akan dimatikan dan semua bean akan di hancurkan).  
+Jika kita ingin berintraksi dengan Lifecycle Spring framework, kita bisa mengimplementasikan [InitializingBean](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/InitializingBean.html)(untuk berintraksi ketika Spring selesai membuat semua bean).  
+[DisposableBean](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/DisposableBean.html)(untuk berintraksi ketika Applikasi Spring akan dimatikan dan semua bean akan di hancurkan).  
 
 ``` java
 package com.basicconfiguration.spring.core.helper.lifeCycleBean;
