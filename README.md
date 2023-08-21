@@ -2571,7 +2571,7 @@ Untuk mendapatkan object ApplicationEventPublisher kita dapat mengimplementasika
 
 # Application Event Listener
 Spring memiliki fitur Event Listener untuk mendengarkan suatu kejadian atau event yang dikirimkan oleh Event Publisher  
-Event pada Spring merupakan object turunan dari [ApplicationEvent](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEvent.html) sedangkan Listener merupakan turunan dari [ApplicationListener](https:docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/context/ApplicationListener.html)  
+Event pada Spring merupakan object turunan dari [ApplicationEvent](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationEvent.html) sedangkan Listener merupakan turunan dari [ApplicationListener](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationListener.html)  
 
 ``` java
 package com.basicconfiguration.spring.core.helper;
