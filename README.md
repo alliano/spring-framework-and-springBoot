@@ -2719,7 +2719,7 @@ public class EventListenerTest {
 ```
 
 # @EvenListener
-Sealain kita mengimplementasikan interface ApplicationListener, kita juga dapat memanfaatkan annotation [@EventListener](https://docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/context/event/EventListener.html) untuk membuat Listener.  
+Sealain kita mengimplementasikan interface ApplicationListener, kita juga dapat memanfaatkan annotation [@EventListener](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/event/EventListener.html) untuk membuat Listener.  
 menggunakan annotation @EvenListener sangatlah mudah dan fleksibel.  
 
 ``` java
