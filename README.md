@@ -33,7 +33,7 @@ ApplicationContext banyak sekali class inmplementasinya, secara garis besar terb
    * Annotation  
 
 Untuk sekarang ini sangat direkomendasikan untuk menggunakan annotation  
-[ApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadocs-api/springframework/context/ApplicationContext.html)
+[ApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)
 
 # @Configuration
 Untuk membuat ApplicationContext menggunakan Annotation, hal pertama yang harus dilakukan adalah membuat class  
