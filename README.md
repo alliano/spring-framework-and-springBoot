@@ -80,7 +80,7 @@ public class ApplicationContextTest {
 # Singleton
 singleton merupakan salhsatu design paterens untuk pembuatan object, yang mana suatu object dibuat hanya 1x, dan jikalau object tersebut di inisiasi atau dibuat ulang maka object tersebut akan mengembalikan object yang sama.  
 By default pembuatan object di spirng container ioc itu menggunakan design patteren
-[Singleton](https://refactoring.guru/design-patteren/singleton)
+[Singleton](https://refactoring.guru/design-patterns/singleton)
 
 ``` java
 package com.basicconfiguration.spring.core;
