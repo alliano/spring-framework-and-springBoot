@@ -54,8 +54,8 @@ public class HelloWolrdConfiguration {
 ```
 
 # Membuat ApplicationContext
-setelah membuat class configuration, setelah itu kita bisa membuat class AnnotationConfigApplicationContext untuk membuat ApplicationContext (untuk mengetahui atau berintraksi dengan spring container Ioc).  
-[ApplicationContext](https://docs.spring.io/spring-framework/docs/current/javadocs-api/org/springframework/context/annotation/AnnotationConfigApplicationContext.html)
+setelah membuat class configuration, setelah itu kita bisa membuat class AnnotationConfigApplicationContext untuk membuat ApplicationContext (untuk mengetahui atau berintraksi dengan spring container Ioc).
+
 ``` java
 public class ApplicationContextTest {
 
